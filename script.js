@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // =========================================
 // 1. İLETİŞİM FORMU (Sayfa Yenilenmeden Gönderim)
 // =========================================
@@ -45,7 +44,6 @@ if (menuBtn && nav) {
         // Butona basıldığında 'aktif' class'ını ekler veya çıkarır
         nav.classList.toggle("aktif"); 
     });
-=======
 // =========================================
 // 1. İLETİŞİM FORMU (Sayfa Yenilenmeden Gönderim)
 // =========================================
@@ -92,5 +90,6 @@ if (menuBtn && nav) {
         // Butona basıldığında 'aktif' class'ını ekler veya çıkarır
         nav.classList.toggle("aktif"); 
     });
->>>>>>> 4cc13d2b32d631c3b88951c9888ed46d039ac583
+
+}
 }
