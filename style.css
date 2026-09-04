@@ -1,47 +1,37 @@
-/* =========================================
-   1. TEMEL AYARLAR
-========================================= */
+/* Temel Sıfırlama ve Genel Ayarlar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
   background-color: #0d1110;
   color: #f2f5f3;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* =========================================
-   2. BAŞLIK VE MENÜ (HEADER)
-========================================= */
-.baslik {
-  height: 80px;
+  line-height: 1.6;
   padding: 0 5%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Header / Navigasyon Tasarımı */
+.baslik {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
-  letter-spacing: 2px;
+  color: #f2f5f3;
+  text-decoration: none;
 }
 
 .logo span {
-  color: #7d998e;
+  color: #4e806e;
 }
 
 .nav {
@@ -50,99 +40,61 @@ a {
 }
 
 .nav a {
-  color: #9aa6a1;
-  font-size: 15px;
-  transition: 0.3s;
+  text-decoration: none;
+  color: #a3b8af;
+  font-size: 16px;
+  transition: color 0.3s ease;
 }
 
 .nav a:hover {
-  color: #ffffff;
-}
-
-<<<<<<< HEAD
-/* Mobilde tam ekran açılan modern e-ticaret tarzı menü */
-.nav.aktif {
-  display: flex;
-  flex-direction: column;
-  position: fixed; /* Ekranın üzerine sabitlenir, kaymaz */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh; /* Ekranın tamamını kaplar */
-  background-color: #0d1110; /* Sitenin koyu arka planı */
-  padding: 100px 10% 50px 10%; /* Üstten logoya yer kalacak şekilde boşluk */
-  gap: 25px; /* Linkler arası boşluk */
-  z-index: 99999; /* Her şeyin en önünde yer alır */
-  overflow-y: auto; /* Çok link olursa kaydırılabilir yapar */
-}
-
-/* Menü içindeki linklerin büyük ve şık durması için */
-.nav.aktif a {
-  font-size: 22px;
-  font-weight: bold;
   color: #f2f5f3;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  padding-bottom: 15px;
-=======
-/* Mobilde açılan menü için eklendi */
-.nav.aktif {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 80px;
-  left: 0;
-  width: 100%;
-  background-color: #0d1110;
-  padding: 20px 5%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
->>>>>>> 4cc13d2b32d631c3b88951c9888ed46d039ac583
 }
 
 .menuBtn {
   display: none;
+  background: none;
+  border: none;
+  color: #f2f5f3;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-/* =========================================
-   3. HERO (KARŞILAMA) BÖLÜMÜ
-========================================= */
+/* Hero (Karşılama) Bölümü */
 .hero {
-  min-height: 100vh;
-  padding: 150px 5% 80px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 80px 0;
   gap: 50px;
 }
 
 .hero-content {
-  flex: 1;
   max-width: 600px;
-  transform: translateY(-70px);
 }
 
 .eyebrow {
-  color: #7d998e;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 13px;
   letter-spacing: 2px;
-  margin-bottom: 20px;
+  color: #7d998e;
+  margin-bottom: 15px;
+  font-weight: 600;
 }
 
-h1 {
-  font-size: 65px;
-  line-height: 1.1;
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 800;
   margin-bottom: 20px;
+  color: #f2f5f3;
 }
 
-h1 span {
-  color: #a8beb5;
+.hero-content h1 span {
+  color: #4e806e;
 }
 
 .hero-text {
-  color: #9aa6a1;
-  font-size: 18px;
-  line-height: 1.6;
-  margin-bottom: 40px;
+  font-size: 17px;
+  color: #a3b8af;
+  margin-bottom: 30px;
 }
 
 .hero-actions {
@@ -151,90 +103,84 @@ h1 span {
 }
 
 .btn {
-  padding: 15px 25px;
-  border-radius: 8px;
-  font-weight: bold;
-  font-size: 14px;
-  transition: 0.3s;
-  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.3s ease;
 }
 
 .btn.primary {
-  background-color: #dce7e2;
-  color: #17201d;
+  background-color: #4e806e;
+  color: #f2f5f3;
 }
 
 .btn.primary:hover {
-  transform: translateY(-3px);
+  background-color: #3f6858;
 }
 
 .btn.secondary {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #f2f5f3;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn.secondary:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
+/* Hero Sağ Taraf (Görsel Kutusu) */
 .hero-card {
-  flex: 1;
-  max-width: 520px;
-  height: 580px;
-  background: linear-gradient(145deg, #26332f, #111614);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 24px;
+  width: 350px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px dashed rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
   display: flex;
-  justify-content: center;
   align-items: center;
-  transform: translate(-40px, -60px);
+  justify-content: center;
 }
 
 .portrait-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: #7d998e;
   font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  font-weight: 500;
 }
 
-/* =========================================
-   4. HAKKIMDA BÖLÜMÜ
-========================================= */
+/* Hakkımda Bölümü */
 .hakkimda {
-  padding: 200px 5% 130px;
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 80px;
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 50px;
 }
 
-h2 {
-  font-size: 55px;
-  line-height: 1.1;
-  letter-spacing: -1px;
+.hakkimdaBaslik h2 {
+  font-size: 36px;
+  font-weight: 800;
 }
 
-h2 span {
-  color: #a8beb5;
+.hakkimdaBaslik h2 span {
+  color: #4e806e;
 }
 
 .hakkimda-icerik {
-  padding-top: 15px;
+  max-width: 600px;
 }
 
 .uzun-yazi {
-  color: #e5e9e7;
-  font-size: 24px;
-  line-height: 1.5;
-  margin-bottom: 25px;
+  font-size: 18px;
+  color: #f2f5f3;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .normal-yazi {
-  color: #9aa6a1;
-  font-size: 16px;
-  line-height: 1.6;
-  margin-bottom: 40px;
+  font-size: 15px;
+  color: #a3b8af;
+  margin-bottom: 30px;
 }
 
 .etiket {
@@ -244,287 +190,173 @@ h2 span {
 }
 
 .etiket span {
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 8px 16px;
-  border-radius: 50px;
-  color: #c4ccc8;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 6px 14px;
+  border-radius: 20px;
   font-size: 13px;
+  color: #a3b8af;
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* =========================================
-   5. PROJELER BÖLÜMÜ
-========================================= */
+/* Projeler Bölümü */
 .projeler {
-  padding: 150px 5% 100px;
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 80px;
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  gap: 50px;
+}
+
+.projeler-baslik h2 {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+.projeler-baslik h2 span {
+  color: #4e806e;
 }
 
 .proje-listesi {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 15px;
-}
-
-.proje {
-  display: grid;
-  grid-template-columns: 60px 1fr 30px;
-  align-items: center;
-  padding: 30px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  transition: 0.3s;
-}
-
-.proje:hover {
-  padding-left: 15px;
-  background-color: rgba(255, 255, 255, 0.02);
-}
-
-.proje-no {
-  color: #a8beb5;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.proje h3 {
-  font-size: 22px;
-  color: #e5e9e7;
-  letter-spacing: -0.5px;
-}
-
-.proje p {
-  color: #9aa6a1;
-  font-size: 14px;
-  margin-top: 5px;
-}
-
-.ok {
-  font-size: 24px;
-  color: #7d998e;
-  transition: 0.3s;
-}
-
-.proje:hover .ok {
-  transform: translate(5px, -5px);
-  color: white;
-}
-
-/* =========================================
-   6. ZİKZAK PROJE DETAY SAYFASI (besin.html)
-========================================= */
-.proje-detay-sayfasi {
-  padding: 150px 5% 100px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.proje-baslik-alani {
-  text-align: center;
-  margin-bottom: 80px;
-}
-
-.proje-baslik-alani h1 {
-  font-size: 45px;
-}
-
-.proje-baslik-alani p {
-  color: #9aa6a1;
-  font-size: 18px;
-  margin-top: 15px;
-}
-
-.adim {
-  display: flex;
-  align-items: center;
-  gap: 120px;
-  margin-bottom: 80px;
-}
-
-.adim.ters {
-  flex-direction: row-reverse;
-}
-
-.gorsel-kutusu {
-  flex: 1;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.gorsel-kutusu img {
-  height: 100%;
-  width: auto;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-}
-
-.metin-kutusu {
-  flex: 1;
-}
-
-.metin-kutusu h3 {
-  color: #e5e9e7;
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.metin-kutusu p {
-  color: #9aa6a1;
-  line-height: 1.7;
-}
-
-/* =========================================
-   7. İLETİŞİM BÖLÜMÜ VE FORM
-========================================= */
-.iletisim {
-  text-align: center;
-  padding: 140px 5% 100px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  background: radial-gradient(circle at 50% 20%, #1c2924, #0d1110 45%);
-}
-
-.iletisim h2 {
-  font-size: clamp(50px, 8vw, 80px);
-  margin-bottom: 20px;
-}
-
-.iletisim-metin {
-  color: #9aa6a1;
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-.iletisim-formu {
   max-width: 600px;
-  margin: 0 auto 40px auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
+.proje {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+}
+
+.proje:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(78, 128, 110, 0.5);
+}
+
+.proje-no {
+  font-size: 14px;
+  color: #7d998e;
+  font-weight: bold;
+}
+
+.proje-detay h3 {
+  font-size: 16px;
+  color: #f2f5f3;
+  margin-bottom: 4px;
+}
+
+.proje-detay p {
+  font-size: 13px;
+  color: #a3b8af;
+}
+
+.ok {
+  color: #a3b8af;
+  font-size: 18px;
+}
+
+/* İletişim Bölümü */
+.iletisim {
+  padding: 80px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 700px;
+}
+
+.iletisim h2 {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.iletisim h2 span {
+  color: #4e806e;
+}
+
+.iletisim-metin {
+  color: #a3b8af;
+  margin-bottom: 30px;
+}
+
+.iletisim-formu {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
 .form-grup {
   display: flex;
-  gap: 20px;
+  gap: 15px;
 }
 
 .iletisim-formu input,
 .iletisim-formu textarea {
   width: 100%;
-  padding: 15px 20px;
   background-color: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  color: white;
-  font-size: 16px;
-  font-family: inherit;
+  padding: 14px;
+  border-radius: 6px;
+  color: #f2f5f3;
+  font-size: 15px;
   outline: none;
-  transition: 0.3s;
+  transition: border-color 0.3s ease;
 }
 
 .iletisim-formu input:focus,
 .iletisim-formu textarea:focus {
-  border-color: #7d998e;
-  background-color: rgba(255, 255, 255, 0.05);
+  border-color: #4e806e;
 }
 
-.iletisim-formu textarea {
-  resize: vertical;
-}
-
-.iletisim-formu button {
-  align-self: center;
-  border: none;
-  margin-top: 10px;
-}
-
-/* =========================================
-   8. SOSYAL MEDYA VE FOOTER
-========================================= */
 .sosyal-medya {
-  margin-top: 60px;
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
 .sosyal-ikon {
-  width: 40px;
-  height: 40px;
-  transition: 0.3s;
+  width: 24px;
+  height: 24px;
   opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
-.sosyal-medya a:hover .sosyal-ikon {
+.sosyal-ikon:hover {
   opacity: 1;
-  transform: translateY(-4px);
 }
 
+/* Footer Bölümü */
 .footer {
-  padding: 30px 5%;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   justify-content: space-between;
-  color: #69746f;
+  color: #7d998e;
   font-size: 13px;
 }
 
-/* =========================================
-   9. MOBİL UYUM (RESPONSIVE) AYARLARI
-========================================= */
+/* Mobil Uyum (Responsive) */
 @media (max-width: 768px) {
-  
-  /* Header ve Menü */
-  .nav { display: none; }
+  .nav {
+    display: none;
+  }
   .menuBtn {
     display: block;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
   }
-
-  /* Hero */
-  .hero {
+  .hero, .hakkimda, .projeler {
     flex-direction: column;
-    padding-top: 120px;
-    text-align: center;
+    align-items: flex-start;
   }
-  .hero-content { transform: translateY(0); }
   .hero-card {
-    transform: translate(0, 0);
-    margin-top: 30px;
     width: 100%;
-    height: 400px;
   }
-  h1 { font-size: 45px; }
-  .hero-actions { justify-content: center; }
-
-  /* Grid Bölümleri */
-  .hakkimda, .projeler {
-    grid-template-columns: 1fr;
-    gap: 40px;
-    padding: 80px 5%;
-  }
-
-  /* İletişim Formu */
-  .form-grup { flex-direction: column; }
-
-  /* Zikzak Proje Detay */
-  .adim, .adim.ters {
+  .form-grup {
     flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-  .gorsel-kutusu { width: 100%; }
-
-  /* Footer */
-  .footer {
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
   }
 }
