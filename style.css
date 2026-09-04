@@ -59,6 +59,7 @@ a {
   color: #ffffff;
 }
 
+
 /* Mobilde tam ekran açılan modern e-ticaret tarzı menü */
 .nav.aktif {
   display: flex;
@@ -69,12 +70,11 @@ a {
   width: 100%;
   height: 100vh;
   background-color: #0d1110;
-  padding: 100px 10% 50px 10%;
+  padding: 100px 10% 50px;
   gap: 25px;
   z-index: 99999;
   overflow-y: auto;
 }
-
 /* Menü içindeki linklerin büyük ve şık durması için */
 .nav.aktif a {
   font-size: 22px;
