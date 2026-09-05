@@ -38,10 +38,18 @@ if (form) {
 // =========================================
 const menuBtn = document.querySelector(".menuBtn");
 const nav = document.querySelector(".nav");
+const navLinks = document.querySelectorAll(".nav a"); // Menüdeki linkleri seçtik
 
 if (menuBtn && nav) {
+    // 1. Butona tıklayınca aç/kapat
     menuBtn.addEventListener("click", () => {
-        // Butona basıldığında 'aktif' class'ını ekler veya çıkarır
         nav.classList.toggle("aktif"); 
+    });
+
+    // 2. Linklerden birine tıklanınca menüyü otomatik kapat
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("aktif");
+        });
     });
 }

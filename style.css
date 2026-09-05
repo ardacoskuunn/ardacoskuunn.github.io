@@ -471,6 +471,9 @@ h2 span {
     color: white;
     font-size: 28px;
     cursor: pointer;
+    /* BU İKİ SATIR EKLENDİ */
+    position: relative;
+    z-index: 100000; 
   }
 
   /* Hero */
