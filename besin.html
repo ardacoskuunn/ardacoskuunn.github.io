@@ -8,66 +8,102 @@
 </head>
 <body>
   
-  <!-- Üst Menü (Ana sayfadaki ile aynı, sadece linkler farklı) -->
   <header class="baslik">
-    <a href="index.html" class="logo"> ARDA <span>.</span></a>
-    <nav class="nav">
-      <a href="index.html">← Ana Sayfaya Dön</a>
-    </nav>
+    <a href="index.html" class="logo"><span>MAC</span></a>
+    
+    <a href="index.html" class="ana-sayfa-btn">
+      <img src="res/house.png" alt="Ana Sayfa" class="ev-ikonu">
+      <span>Ana Sayfaya Dön</span>
+    </a>
   </header>
 
-  <!-- PROJE DETAY İÇERİĞİ -->
   <main class="proje-detay-sayfasi">
     
     <div class="proje-baslik-alani">
+      <img src="res/besinBeyaz.png" alt="BES-IN Logo" class="proje-logo">
+      
       <h1>BES-IN</h1>
-      <p>Bu projenin kısa özeti ve yapılış amacı buraya gelecek.</p>
+      <p>BES-IN, yapay zeka (Google Gemini) destekli akıllı bir gıda analiz uygulamasıdır. Amacı; kullanıcıların barkod veya ürün fotoğrafı aracılığıyla gıdaları saniyeler içinde analiz etmesini sağlamak ve kişisel sağlık profillerine (çölyak, vegan, diyabet vb.) uygun, özelleştirilmiş beslenme tavsiyeleri sunmaktır.</p>
     </div>
 
-    <!-- 1. ADIM: Görsel Solda, Metin Sağda -->
     <div class="adim">
       <div class="gorsel-kutusu">
-        <img src="res/KayitS.png" alt="Kayit">
+        <img src="res/Karsilama.jpeg" alt="karsilama">
       </div>
       <div class="metin-kutusu">
-        <h3>1. Aşama: Kayıt Ekranı</h3>
-        <p>Burda kullanıcılarımz </p>
+        <h3>1. Adım: İlk Buluşma (Karşılama Ekranı)</h3>
+        <p><b>"Doğru Besin, Kaliteli Yaşam"</b><br>Uygulamamıza adım attığınız ilk andan itibaren sizi göz yormayan, modern ve sade bir arayüz karşılıyor. Kullanıcılarımız bu ekrandan yola çıkarak yepyeni bir hesap oluşturabilir veya mevcut hesaplarına hızlıca geçiş yapabilirler. Sistem, mobil uyumlu dinamik tasarımıyla en iyi kullanıcı deneyimini (UX) sunmayı hedefler.</p>
       </div>
     </div>
 
-    <!-- 2. ADIM: Metin Solda, Görsel Sağda (Bunun için "ters" class'ı ekledik) -->
     <div class="adim ters">
-      <div class="gorsel-kutusu">Görsel 2</div>
+      <div class="gorsel-kutusu">
+        <img src="res/Kayit.jpeg" alt="kayit">
+      </div>
       <div class="metin-kutusu">
-        <h3>2. Aşama: Veritabanı ve Altyapı</h3>
-        <p>Görsel 2'nin açıklaması. Kağıda çizdiğin gibi, this sefer yazı solda resim sağda kalacak.</p>
+        <h3>2. Adım: Kayıt ve Yapay Zeka Profilinin Oluşturulması</h3>
+        <p><b>Sizi Tanıyan Bir Asistan:</b><br>Kişiselleştirilmiş Kayıt BES-IN'de kayıt olmak sadece bilgilerinizi girmek demek değildir; aynı zamanda dijital sağlık profilinizi oluşturmaktır. Kullanıcılarımız Laktoz İntoleransı, Çölyak, Vegan veya Sporcu gibi diyet tercihlerini bu ekranda belirler. Bu veriler, Google Gemini yapay zekasının ileride size sunacağı sağlık ve beslenme yorumlarının temelini oluşturur.</p>
       </div>
     </div>
 
-    <!-- 3. ADIM: Görsel Solda, Metin Sağda -->
     <div class="adim">
-      <div class="gorsel-kutusu">Görsel 3</div>
+      <div class="gorsel-kutusu">
+        <img src="res/MailDogrulama.jpeg" alt="mailDogrulama">
+      </div>
       <div class="metin-kutusu">
-        <h3>3. Aşama: Geliştirme</h3>
-        <p>Görsel 3'ün açıklaması. Adım adım anlatmaya devam ediyoruz.</p>
+        <h3>3. Adım: Güvenli Doğrulama</h3>
+        <p><b>Supabase Altyapısıyla Verileriniz Güvende</b><br>Kayıt adımından sonra, kullanıcı güvenliğini en üst düzeyde tutmak amacıyla 6 haneli e-posta doğrulama sistemi devreye girer. Supabase bulut veritabanı entegrasyonu sayesinde onay kodları saniyeler içinde iletilir ve hesabınız güvenli bir şekilde aktifleştirilir.</p>
       </div>
     </div>
 
-    <!-- 4. ADIM: Metin Solda, Görsel Sağda (Yine "ters" class'ı) -->
     <div class="adim ters">
-      <div class="gorsel-kutusu">Görsel 4</div>
+      <div class="gorsel-kutusu">
+        <img src="res/Giris.jpeg" alt="giris">
+      </div>
       <div class="metin-kutusu">
-        <h3>4. Aşama: Sonuç ve Test</h3>
-        <p>Görsel 4'ün açıklaması. Projenin son hali ve nasıl çalıştığı hakkında bilgiler.</p>
+        <h3>4. Adım: Hızlı ve Güvenli Giriş (Login)</h3>
+        <p><b>Hesabınıza Anında Erişim</b><br>Hesabını daha önceden oluşturmuş kullanıcılarımız, karmaşadan uzak ve minimalist giriş ekranımız sayesinde vakit kaybetmeden sisteme erişebilirler. E-posta adresi ve şifre ile yapılan giriş işlemleri, dinamik arayüz ile kusursuz bir şekilde sağlanır.</p>
+      </div>
+    </div>
+
+    <div class="adim">
+      <div class="gorsel-kutusu ikili">
+        <img src="res/SifremiUnuttum1.jpeg" alt="sifreUnuttum1">
+        <img src="res/SifremiUnuttum2.jpeg" alt="sifreUnuttum2">
+      </div>
+      <div class="metin-kutusu">
+        <h3>5. Adım: Şifre Kurtarma Süreci</h3>
+        <p><b>Güvenlikten Ödün Vermeyen Şifre Sıfırlama</b><br>Kullanıcılarımız şifrelerini unuttuklarında, kayıtlı e-posta adreslerine gönderilen özel doğrulama kodu ile hesaplarını kolayca kurtarabilirler.</p>
+      </div>
+    </div>
+
+    <div class="adim ters">
+      <div class="gorsel-kutusu ikili">
+        <img src="res/AnaSayfa.jpeg" alt="anaSayfa">
+        <img src="res/AnaSayfaCikis.jpeg" alt="anaSayfaCikis">
+      </div>
+      <div class="metin-kutusu">
+        <h3>6. Adım: Ana Sayfa ve Yapay Zeka Destekli Analiz</h3>
+        <p><b>Analiz Saniyeler İçinde Başlıyor</b><br>Sisteme giriş yaptıktan sonra sizi tamamen amaca yönelik, temiz bir ana sayfa karşılar. OpenFoodFacts API ve Google Gemini entegrasyonu sayesinde barkod okutarak saniyeler içinde analiz sağlanır.</p>
+      </div>
+    </div>
+
+    <div class="adim">
+      <div class="gorsel-kutusu">
+        <img src="res/AnaSayfaProfil.jpeg" alt="anaSayfaProfil">
+      </div>
+      <div class="metin-kutusu">
+        <h3>7. Adım: Dinamik Profil Yönetimi</h3>
+        <p><b>Tercihleriniz Zamanla Değişebilir</b><br>Profil ekranı, kullanıcıların BES-IN deneyimini kendi yaşam tarzlarına göre sürekli güncel tutabildikleri merkezdir.</p>
       </div>
     </div>
 
   </main>
+  
   <footer class="footer">
     <span>© 2026 MAC</span>
     <span>Kendi alanım, kendi hikâyem.</span>
   </footer>
 
-<script src="script.js"></script>
 </body>
 </html>

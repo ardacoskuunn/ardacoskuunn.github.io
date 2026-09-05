@@ -303,7 +303,7 @@ h2 span {
 .proje-detay-sayfasi {
   padding: 150px 5% 100px;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 
 .proje-baslik-alani {
@@ -317,6 +317,7 @@ h2 span {
 
 .proje-baslik-alani p {
   color: #9aa6a1;
+  text-align: le;
   font-size: 18px;
   margin-top: 15px;
 }
@@ -326,6 +327,7 @@ h2 span {
   align-items: center;
   gap: 120px;
   margin-bottom: 80px;
+  flex-wrap: wrap;
 }
 
 .adim.ters {
@@ -338,6 +340,7 @@ h2 span {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 20px; /* Yan yana olanların arasına boşluk açar */
 }
 
 .gorsel-kutusu img {
@@ -345,6 +348,11 @@ h2 span {
   width: auto;
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+img {
+  max-width: 100%; /* Resim, içinde bulunduğu kutudan asla daha geniş olamaz */
+  height: auto; /* Küçülürken en-boy oranını korur, çirkinleşmez */
 }
 
 .metin-kutusu {
@@ -456,6 +464,73 @@ h2 span {
   color: #69746f;
   font-size: 13px;
 }
+
+/* =========================================
+   PROJE DETAY SAYFASI ÖZEL AYARLARI
+========================================= */
+
+/* Ana Sayfaya Dön Butonu (İkon Büyütüldü, Aralık Açıldı) */
+.ana-sayfa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #9aa6a1;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.ana-sayfa-btn:hover {
+  color: #ffffff;
+  border-color: #7d998e;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ev-ikonu {
+  width: 22px;
+  height: 22px;
+  filter: invert(0.7);
+  transition: 0.3s;
+}
+
+.ana-sayfa-btn:hover .ev-ikonu {
+  filter: invert(1);
+}
+
+/* Sayfa Üstündeki Logo */
+.proje-logo {
+  display: block;
+  margin: -40px auto 25px auto;
+  max-width: 140px;
+  height: auto;
+}
+
+/* Detay Sayfası Paragrafı (Sola Dayalı) */
+.proje-baslik-alani p {
+  color: #9aa6a1;
+  font-size: 18px;
+  margin-top: 15px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+/* İkili Görsellerin Arasını Açma */
+.gorsel-kutusu.ikili {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+}
+
+.gorsel-kutusu.ikili img {
+  max-height: 480px;
+  width: auto;
+  border-radius: 16px;
+}
+
 
 /* =========================================
    9. MOBİL UYUM (RESPONSIVE) AYARLARI
