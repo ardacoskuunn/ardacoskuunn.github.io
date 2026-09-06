@@ -606,4 +606,16 @@ img {
     text-align: center;
     gap: 10px;
   }
+
+  /* İkili görselleri mobilde alt alta alır ve büyütür */
+  .gorsel-kutusu.ikili {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .gorsel-kutusu.ikili img {
+    width: 100%;
+    max-width: 320px; /* Çok devasa olmasını engellemek için sınır */
+    height: auto;
+  }
 }
