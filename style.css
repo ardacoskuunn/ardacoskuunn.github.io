@@ -35,9 +35,15 @@ a {
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 10px;
   font-weight: bold;
   letter-spacing: 2px;
+}
+
+.logo img {
+  max-height: 45px; /* Resmi üst menüye sığacak şekilde küçültür */
+  width: auto; /* Resmin orantısının bozulmasını engeller */
+  vertical-align: middle; /* Yanındaki menü linkleriyle aynı hizaya getirir */
 }
 
 .logo span {
@@ -546,7 +552,6 @@ img {
     color: white;
     font-size: 28px;
     cursor: pointer;
-    /* BU İKİ SATIR EKLENDİ */
     position: relative;
     z-index: 100000; 
   }
@@ -580,10 +585,20 @@ img {
   /* Zikzak Proje Detay */
   .adim, .adim.ters {
     flex-direction: column;
-    text-align: center;
     gap: 20px;
   }
+  
   .gorsel-kutusu { width: 100%; }
+
+  /* YENİ EKLENEN KISIM: Mobilde yazılara nefes aldırır */
+  .metin-kutusu {
+    padding: 0 25px; /* Yanlardan 25px boşluk bırakır */
+    text-align: left; /* Okunabilirliği artırmak için metni sola dayar */
+  }
+
+  .proje-baslik-alani p {
+    padding: 0 25px;
+  }
 
   /* Footer */
   .footer {
