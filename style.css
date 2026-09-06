@@ -47,7 +47,7 @@ a {
 /* JavaScript ile menüyü saklamak için kullanılacak sınıf */
 .baslik.gizli {
   transform: translateY(-100%); /* Menüyü kendi boyu kadar yukarı itip saklar */
-}
+}b-
 
 .logo {
   font-size: 10px;
