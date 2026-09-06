@@ -6,8 +6,17 @@ const navMenu = document.querySelector('.nav');
 
 // Eğer bu sayfada menü butonu varsa bu kodu çalıştır (hata vermeyi önler)
 if (menuBtn && navMenu) {
+  // Hamburger ikonuna tıklayınca menüyü aç/kapat
   menuBtn.addEventListener('click', () => {
     navMenu.classList.toggle('aktif');
+  });
+
+  // YENİ: Menüdeki herhangi bir linke tıklayınca menüyü otomatik kapat
+  const menuLinkleri = navMenu.querySelectorAll('a');
+  menuLinkleri.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('aktif');
+    });
   });
 }
 
