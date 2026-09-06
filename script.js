@@ -53,3 +53,25 @@ if (menuBtn && nav) {
         });
     });
 }
+
+// Akıllı Üst Menü (Yukarı kaydırınca beliren menü)
+let sonKaydirma = window.scrollY;
+const baslik = document.querySelector('.baslik');
+
+window.addEventListener('scroll', () => {
+  // Eğer mobilde hamburger menü açıksa gizlenme işlemini iptal et
+  if (document.querySelector('.nav').classList.contains('aktif')) return;
+
+  const guncelKaydirma = window.scrollY;
+
+  // Sayfa en üstteyse veya yukarı kaydırılıyorsa menüyü göster
+  if (guncelKaydirma <= 0 || guncelKaydirma < sonKaydirma) {
+    baslik.classList.remove('gizli');
+  } 
+  // Aşağı kaydırılıyorsa menüyü gizle
+  else if (guncelKaydirma > sonKaydirma) {
+    baslik.classList.add('gizli');
+  }
+
+  sonKaydirma = guncelKaydirma;
+});

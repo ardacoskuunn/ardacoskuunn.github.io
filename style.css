@@ -32,6 +32,21 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
+  /* --- YENİ EKLENENLER --- */
+  position: fixed; /* Menüyü ekranın en üstüne sabitler */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000; /* Her şeyin üstünde durmasını sağlar */
+  background-color: rgba(13, 17, 16, 0.95); /* Arka planı hafif transparan siyah yapar */
+  backdrop-filter: blur(10px); /* Arkadan geçen yazıları şık bir şekilde flulaştırır */
+  transition: transform 0.3s ease-in-out; /* Aşağı-yukarı kayma animasyonu */
+}
+
+/* JavaScript ile menüyü saklamak için kullanılacak sınıf */
+.baslik.gizli {
+  transform: translateY(-100%); /* Menüyü kendi boyu kadar yukarı itip saklar */
 }
 
 .logo {
